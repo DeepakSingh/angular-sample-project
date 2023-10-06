@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: angular-app
+      type: frontend
+  template:
+    metadata:
+      labels:
+        app: angular-app
+        type: frontend
+    spec:
+      containers:
+      - name: angular-app
+        image: deepaksingh231096/angular
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
