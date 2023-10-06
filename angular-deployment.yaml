@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: angular-app
-        image: deepaksingh231096/angular
+        image: deepaksingh231096/angular:v1
         resources:
           limits:
             memory: "128Mi"
